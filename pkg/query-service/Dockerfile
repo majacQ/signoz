@@ -18,7 +18,7 @@ RUN go build -o ./bin/query-service ./main.go
 RUN chmod +x ./bin/query-service
 
 # use a minimal alpine image
-FROM alpine:3.7
+FROM alpine:latest
 # add ca-certificates in case you need them
 RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk/*
 # set working directory
