@@ -1,4 +1,8 @@
-# Docker
+# Configuring Over Local
+1. Docker
+1. Without Docker
+
+## With Docker
 
 **Building image**
 
@@ -14,11 +18,20 @@ or
 docker tag signoz/frontend:latest 7296823551/signoz:latest
 ```
 
-**Running locally**
-
 ```
 docker-compose up
 ```
+
+## Without Docker
+Follow the steps below
+
+1. ```git clone https://github.com/SigNoz/signoz.git && cd signoz/frontend```
+1. change baseURL to ```<test environment URL>``` in file ```src/constants/env.ts```
+
+1. ```yarn install```
+1. ```yarn dev```
+
+```Note: Please ping us in #contributing channel in our slack community and we will DM you with <test environment URL>```
 
 # Getting Started with Create React App
 
@@ -31,7 +44,7 @@ In the project directory, you can run:
 ### `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3301](http://localhost:3301) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
